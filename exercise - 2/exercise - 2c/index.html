@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="MeanStack" />
+    <meta
+      name="keywords"
+      content="Online Shopping Site for Mobiles, Electronics, Furniture, 
+Grocery, Lifestyle, Books & More. Best Offers!"
+    />
+    <meta name="author" content="third cse" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="/exercise - 1/style.css" />
+    <style>
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        border: none;
+        height: 100%;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left;
+        width: 100%;
+      }
+      .divcontent {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        max-width: 500px;
+        background-color: lightsteelblue;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+      }
+      h3 {
+        color: white;
+        max-width: 500px;
+        background-color: blue;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <nav id="logo">
+          <a href="/exercise - 1/homepage.html" class="logo">
+            <img src="/exercise - 1/logo.png" height="50x" width="50px" />E-kart
+          </a>
+        </nav>
+      </div>
+      <nav class="header-right">
+        <a href="#">Login</a>
+        <a href="#">Sign up</a>
+        <a href="#">Track Order</a>
+        <a href="About.html">About us</a>
+      </nav>
+    </header>
+    <body>
+      <div class="divcontent">
+        <div
+          style="
+            background-color: blue;
+            color: white;
+            max-width: 500px;
+            text-align: center;
+          "
+        >
+          Registration
+        </div>
+        <table>
+          <tr>
+            <td>
+              <input type="text" id="txtinp" placeholder="Username" required />
+            </td>
+            <td>
+              <input
+                type="password"
+                id="txtpwd"
+                placeholder="password"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="txtpincode" placeholder="Pincode" />
+            </td>
+            <td>
+              <input type="text" id="txtlocation" placeholder="Location" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea
+                cols="55"
+                rows="6"
+                id="address"
+                placeholder="Address(Area and 
+    Street)"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="txtcity" placeholder="City/Town" />
+            </td>
+            <td>
+              <select id="states">
+                <option>---Select State---</option>
+                <option>Andhra Pradesh</option>
+                <option>Telangana</option>
+                <option>Bihar</option>
+                <option>Jharkhand</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="txtpincode" placeholder="Landmark" />
+            </td>
+            <td>
+              <input type="text" id="txtlocation" placeholder="Phone" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">Address:</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="address" />Home address</td>
+            <td><input type="radio" name="address" />Work</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="submit" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </body>
+  </body>
+</html>

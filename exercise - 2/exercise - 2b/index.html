@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="MeanStack" />
+    <meta
+      name="keywords"
+      content="Online Shopping Site for Mobiles, Electronics, Furniture, 
+        Grocery, Lifestyle, Books & More. Best Offers!"
+    />
+    <meta name="author" content="third cse" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="/Exercise-1/style.css" />
+    <style>
+      .divcontent {
+        position: fixed;
+        left: 50%;
+        top: 45%;
+        max-width: 500px;
+        background-color: lightsteelblue;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="divcontent">
+      <div
+        style="
+          background-color: blue;
+          color: white;
+          max-width: 500px;
+          text-align: center;
+        "
+      >
+        Color and Date Pickers, Select and Datalist Elements
+      </div>
+      <table>
+        <tr>
+          <td>Color Picker :</td>
+          <td><input type="color" /></td>
+        </tr>
+        <tr>
+          <td>Datepicker</td>
+          <td>
+            <input type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label> Select city </label>
+          </td>
+          <td>
+            <input list="cities" />
+            <datalist id="cities">
+              <option value="Hyderabad"></option>
+              <option value="Bangalore"></option>
+              <option value="Visakhapatnam"></option>
+            </datalist>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

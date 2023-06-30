@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Movie details</h3>
+    <div id="md"></div>
+  </body>
+  <script>
+    var Movie_details = [
+      {
+        Name: "RRR",
+        Starring: "Ram charan ,ntr",
+      },
+      {
+        Name: "Bahubali",
+        Starring: "Prabas",
+      },
+    ];
+    let output = document.getElementById("md");
+    let result = ``;
+    for (let i = 0; i < Movie_details.length; i++) {
+      result +=
+        `MovieName: ${Movie_details[i].Name} , Starring: ${Movie_details[i].Starring}` +
+        " ";
+    }
+    output.innerHTML = result;
+  </script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Rating</title>
+    <style>
+      .divcontent {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        max-width: 500px;
+        background-color: white;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+      }
+      .column {
+        float: left;
+        width: 50%;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: darkorange;
+        color: white;
+        border: none;
+        height: 100%;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        /* float: left; */
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="divcontent">
+      <div class="row">
+        <h2>Enter Movie details....</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <input type="text" id="mname" placeholder="Moviename" />
+        </div>
+        <div class="column">
+          <input type="text" id="mstar" placeholder="staring" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <input type="text" id="lang" placeholder="Language" />
+        </div>
+        <div class="column">
+          <input type="text" id="rating" placeholder="ratings" />
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" onclick="movies()" value="Submit" />
+      </div>
+      <br />
+      <div class="row" id="tbl"></div>
+    </div>
+    <script>
+      function movies() {
+        let M_name;
+        let M_star;
+        let lang;
+        let rating;
+        M_name = document.getElementById("mname").value;
+        M_star = document.getElementById("mstar").value;
+        lang = document.getElementById("lang").value;
+        rating = document.getElementById("rating").value;
+        starring = M_star.split(",");
+        let htm = `<table border=1> 
+<tr> <td> Move Name: </td> <td width:100%>${M_name} </td> </tr>
+<tr> <td> Starring: </td> <td width:100%>${starring} </td> </tr>
+<tr> <td> Language: </td> <td width:100%>${lang} </td> </tr>
+<tr> <td> Ratings: </td> <td width:100%>${rating} </td> </tr> 
+</table>`;
+        document.getElementById("tbl").innerHTML = htm;
+      }
+    </script>
+  </body>
+</html>

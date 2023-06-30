@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Movie Tickets...</title>
+    <style>
+      .divcontent {
+        /*margin-left: 50px; 
+margin-right: 50px; 
+margin-top: 50px;*/
+        position: fixed;
+        left: 50%;
+        top: 20%;
+        max-width: 500px;
+        background-color: white;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+      }
+      .column {
+        float: left;
+        width: 50%;
+      }
+      /* Clear floats after the columns */
+      .row::after {
+        display: table;
+        clear: both;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        background-color: darkorange;
+        color: white;
+        border: none;
+        height: 100%;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        float: left;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="divcontent">
+      <div class="row">Book tickets ...</div>
+      <div class="row">
+        <div class="column">
+          <select id="mvs" name="movies">
+            <option>Select Movie</option>
+            <option>RRR</option>
+            <option>Avatar-2</option>
+          </select>
+        </div>
+        <div class="column">
+          <input
+            type="text"
+            id="not"
+            placeholder="Number Of Tickets"
+            onkeyup="show_price()"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="ADD" onclick="show_price()" />
+      </div>
+      <div id="price"></div>
+      <div id="totaltickets"></div>
+    </div>
+    <script>
+      function show_price() {
+        const ticketcost = 150;
+        let discountpercent = 10;
+        let not = document.getElementById("not").value;
+        let mn = document.getElementById("mvs").value;
+        let discountprice = (ticketcost * discountpercent) / 100;
+        let totalprice = ticketcost - discountprice;
+        if (not > 2 && not < 6) {
+          let finalprice = `For Movie ${mn}: Cost of ${not} tickets ${
+            totalprice * not
+          }`;
+          document.getElementById("price").innerHTML = finalprice;
+        } else if (not <= 2) {
+          let finalprice = `For Movie ${mn}: Cost of ${not} tickets ${
+            ticketcost * not
+          }`;
+          document.getElementById("price").innerHTML = finalprice;
+        } else {
+          let finalprice = " 6 or more than 6 tickets not allowed to book. ";
+          document.getElementById("price").innerHTML = finalprice;
+        }
+      }
+    </script>
+  </body>
+</html>
